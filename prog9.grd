@@ -1,0 +1,52 @@
+Program 9 (out of 200 points)
+
+1) +120 points for turning any reasonable work in: 120
+
+2) +20 points (10%) for turning in the project on time: 20
+
+3) +10 points if it compiles without errors: 10
+
+4) +10 points if it compilers without warnings: 10
+
+3) +40 points for meeting basic program and style requirements:
+//Points may still be awarded here for programs with errors/warnings
+
+	1) Server uses threads for 2+ clients: 10
+	
+	2) Received msg from client A sent to client B+: 5
+
+	3) Clients get user input and server input without blocking: 5
+
+	4) Client obtains username and sends to server: 5
+
+	5) Server stores username and prepends it to messages: 3
+
+	6) Server boots clients that dupe username; keeps running: -2
+
+	7) Client checks for \q and quits: -2
+
+	8) Readme file is present: 1
+
+	9) Error checking: 5
+
+5) Bonus work (up to +20):
+	1) Misc
+	2) Signals / Ctrl+C
+	3) Authentication
+	4) Store names/passwords
+	5) Additional commands
+
+Additional comments (no deductions are associated with these):
+
+The basics are working exactly as they should. There is indeed a problem with
+how you're handling disconnects. When a client either joins with an already
+used name or uses \q to disconnect, the other clients stop behaving correctly.
+This is probably a result of the server needing to take some extra steps to
+monitor for disconnecting clients, close their socket file descriptors and
+remove them from the global client list.
+
+Final Grade:: 176
+
+//late
+Calculation:: 160 - 20 + 40 - 4
+
